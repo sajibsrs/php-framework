@@ -40,4 +40,12 @@ class QueryBuilder
         return self::$instance;
     }
 
+    /**
+     * Query builder LIKE operator
+     */
+    public static function like(string $column, string $pattern): QueryBuilder
+    {
+        self::$where[] = trim($column . ' LIKE ' . $pattern);
+        return self::$instance;
+    }
 }

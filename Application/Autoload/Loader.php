@@ -8,8 +8,8 @@ class Loader {
 
     protected const UNABLE_TO_LOAD = "Unable to load file.";
     
-    protected static array $dirs = [];
     protected static int $registered = 0;
+    protected static array $dirs = [];
 
     public function __construct($dirs = [])
     {
@@ -25,28 +25,6 @@ class Loader {
         if (self::$registered == 0) {
             spl_autoload_register(__CLASS__ . '::autoload');
             self::$registered++;
-        }
-    }
-    
-    /**
-     * Load file specified
-     */
-    protected static function loadFile(string $file): bool
-    {
-        if (file_exists($file)) {
-            require_once $file;
-            return true;
-        }
-        
-        return false;
-    }
-
-    public static function addDirs(mixed $dirs): void
-    {
-        if (is_array($dirs)) {
-            self::$dirs = array_merge(self::$dirs, $dirs);
-        } else {
-            self::$dirs[] = $dirs;
         }
     }
 
@@ -73,5 +51,27 @@ class Loader {
         }
 
         return $success;
+    }
+
+    public static function addDirs(mixed $dirs): void
+    {
+        if (is_array($dirs)) {
+            self::$dirs = array_merge(self::$dirs, $dirs);
+        } else {
+            self::$dirs[] = $dirs;
+        }
+    }
+    
+    /**
+     * Load file specified
+     */
+    protected static function loadFile(string $file): bool
+    {
+        if (file_exists($file)) {
+            require_once $file;
+            return true;
+        }
+        
+        return false;
     }
 }

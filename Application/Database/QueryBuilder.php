@@ -30,4 +30,14 @@ class QueryBuilder
         
         return self::$instance;
     }
+
+    /**
+     * Query builder WHERE clause
+     */
+    public static function where(string $clause = null): QueryBuilder
+    {
+        self::$where[0] = ' WHERE ' . $clause;
+        return self::$instance;
+    }
+
 }

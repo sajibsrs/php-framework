@@ -48,4 +48,13 @@ class QueryBuilder
         self::$where[] = trim($column . ' LIKE ' . $pattern);
         return self::$instance;
     }
+
+    /**
+     * Query builder AND operator
+     */
+    public static function and(string $condition = null): QueryBuilder
+    {
+        self::$where[] = trim('AND ' . $condition);
+        return self::$instance;
+    }
 }

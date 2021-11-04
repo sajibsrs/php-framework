@@ -57,4 +57,13 @@ class QueryBuilder
         self::$where[] = trim('AND ' . $condition);
         return self::$instance;
     }
+
+    /**
+     * Query builder OR operator
+     */
+    public static function or(string $condition = null): QueryBuilder
+    {
+        self::$where[] = trim('OR ' . $condition);
+        return self::$instance;
+    }
 }

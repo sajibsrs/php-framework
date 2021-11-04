@@ -4,11 +4,11 @@ namespace Application\Database;
 
 class QueryBuilder
 {
-    public static $sql = '';
-    public static $instance = null;
-    public static $prefix = '';
-    public static $where = [];
-    public static $control = ['', ''];
+    protected static $sql = '';
+    protected static $instance = null;
+    protected static $prefix = '';
+    protected static $where = [];
+    protected static $control = ['', ''];
 
     /**
      * Query builder SELECT statement

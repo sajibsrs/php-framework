@@ -75,4 +75,13 @@ class QueryBuilder
         self::$where[] = 'IN ( ' . implode(',', $values) . ' )';
         return self::$instance;
     }
+
+    /**
+     * Query builder NOT operator
+     */
+    public static function not(string $condition): QueryBuilder
+    {
+        self::$where[] = trim('NOT ' . $condition);
+        return self::$instance;
+    }
 }

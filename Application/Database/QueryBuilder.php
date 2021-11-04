@@ -15,7 +15,7 @@ class QueryBuilder
      * 
      * @param string $table Table name.
      * @param string|null $columns Column name. Comma separated if there's more than one.
-     * If none provided *select* all will be applied.
+     * If none provided *SELECT * (ALL)* will be applied.
      * @return Application\Database\Database Database instance.
      */
     public static function select(string $table, string $columns = null): QueryBuilder

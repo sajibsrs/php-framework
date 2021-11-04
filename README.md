@@ -16,4 +16,4 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * Implementing *PSR* classes
   
 ### Notes
-* It's only for experiment purpose and intended for production use.
+* It's only for experiments and not intended for production use.

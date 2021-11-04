@@ -22,7 +22,7 @@ class QueryBuilder
     {
         self::$instance = new QueryBuilder();
 
-        if($columns) {
+        if ($columns) {
             self::$prefix = 'SELECT ' . $columns . ' FROM ' . $table;
         } else {
             self::$prefix = 'SELECT * FROM ' . $table;

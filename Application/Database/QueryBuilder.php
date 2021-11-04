@@ -84,4 +84,13 @@ class QueryBuilder
         self::$where[] = trim('NOT ' . $condition);
         return self::$instance;
     }
+
+    /**
+     * Query builder LIMIT clause
+     */
+    public static function limit(int $limit): QueryBuilder
+    {
+        self::$control[0] = 'LIMIT ' . $limit;
+        return self::$instance;
+    }
 }

@@ -102,4 +102,13 @@ class QueryBuilder
         self::$control[1] = 'OFFSET ' . $offset;
         return self::$instance;
     }
+
+    /**
+     * Get the query built by the Query builder
+     */
+    public static function getSQL(): string
+    {
+        self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . self::$control[0] . ' ' . self::$control[1];
+        return trim(preg_replace('/  /', ' ', self::$sql));
+    }
 }

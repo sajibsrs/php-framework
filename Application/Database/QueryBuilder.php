@@ -8,7 +8,7 @@ class QueryBuilder
     protected static $instance = null;
     protected static $prefix = '';
     protected static $where = [];
-    protected static $control = ['', ''];
+    protected static $control = [];
 
     /**
      * Query builder SELECT statement
@@ -72,14 +72,14 @@ class QueryBuilder
      */
     public static function in(array $values): QueryBuilder
     {
-        self::$where[] = 'IN ( ' . implode(',', $values) . ' )';
+        self::$where[] = 'IN (' . implode(', ', $values) . ')';
         return self::$instance;
     }
 
     /**
      * Query builder NOT operator
      */
-    public static function not(string $condition): QueryBuilder
+    public static function not(string $condition = ''): QueryBuilder
     {
         self::$where[] = trim('NOT ' . $condition);
         return self::$instance;
@@ -108,7 +108,7 @@ class QueryBuilder
      */
     public static function getSQL(): string
     {
-        self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . self::$control[0] . ' ' . self::$control[1];
+        self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . implode(' ', self::$control);
         self::$sql = trim(preg_replace('/  /', ' ', self::$sql));
         return self::$sql;
     }

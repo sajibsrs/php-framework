@@ -93,4 +93,13 @@ class QueryBuilder
         self::$control[0] = 'LIMIT ' . $limit;
         return self::$instance;
     }
+
+    /**
+     * Query builder OFFSET clause
+     */
+    public static function offset(int $offset): QueryBuilder
+    {
+        self::$control[1] = 'OFFSET ' . $offset;
+        return self::$instance;
+    }
 }

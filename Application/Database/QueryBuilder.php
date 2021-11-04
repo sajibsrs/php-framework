@@ -109,6 +109,7 @@ class QueryBuilder
     public static function getSQL(): string
     {
         self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . self::$control[0] . ' ' . self::$control[1];
-        return trim(preg_replace('/  /', ' ', self::$sql));
+        self::$sql = trim(preg_replace('/  /', ' ', self::$sql));
+        return self::$sql;
     }
 }

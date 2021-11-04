@@ -66,4 +66,13 @@ class QueryBuilder
         self::$where[] = trim('OR ' . $condition);
         return self::$instance;
     }
+
+    /**
+     * Query builder IN operator
+     */
+    public static function in(array $statement): QueryBuilder
+    {
+        self::$where[] = 'IN ( ' . implode(',', $statement) . ' )';
+        return self::$instance;
+    }
 }

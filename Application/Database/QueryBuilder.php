@@ -70,9 +70,9 @@ class QueryBuilder
     /**
      * Query builder IN operator
      */
-    public static function in(array $statement): QueryBuilder
+    public static function in(array $values): QueryBuilder
     {
-        self::$where[] = 'IN ( ' . implode(',', $statement) . ' )';
+        self::$where[] = 'IN ( ' . implode(',', $values) . ' )';
         return self::$instance;
     }
 }

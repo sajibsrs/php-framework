@@ -33,8 +33,6 @@ class Loader {
         $success = false;
         $name = str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
 
-        echo $name . PHP_EOL;
-
         foreach (self::$dirs as $dir) {
             $file = $dir . DIRECTORY_SEPARATOR . $name;
 

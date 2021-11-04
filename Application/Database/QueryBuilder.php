@@ -106,7 +106,7 @@ class QueryBuilder
     /**
      * Get the query built by the Query builder
      */
-    public static function getSQL(): string
+    public static function getSql(): string
     {
         self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . implode(' ', self::$control);
         self::$sql = trim(preg_replace('/  /', ' ', self::$sql));

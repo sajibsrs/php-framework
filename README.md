@@ -2,11 +2,11 @@
 This project is all about experimenting with features PHP/Modern PHP has to offer. Implementing programming best practices and patterns, and creating a custom *PHP framework* from scratch.
 
 ### Index and progress
-* [ ] Creating configurations
+* [x] Creating configurations
 * [x] Creating PHP autoloader
-* [ ] Database connection
+* [x] Database connection
 * [x] Query builder
-* [ ] Pagination
+* [x] Pagination
 * [ ] ORM (Object relationship mapper)
 * [ ] HTML component generator
 * [ ] Middleware

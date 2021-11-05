@@ -14,7 +14,7 @@ class Connection
 
     public function __construct(array $config)
     {
-        if (! isset($config)) {
+        if (! isset($config) || empty($config)) {
             $error = __METHOD__ . ' : ' . self::ERROR_CONFIG . PHP_EOL;
             throw new Exception($error);
         }
@@ -25,8 +25,7 @@ class Connection
             $this->pdo = new PDO(
                 $dsn,
                 $config['user'],
-                $config['password'],
-                [PDO::ATTR_ERRMODE => $config['errmode']]
+                $config['password']
             );
         } catch (PDOException $e) {
             error_log($e->getMessage());

@@ -13,7 +13,7 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * [ ] Authentication
 * [ ] REST API
 * [ ] Security
-* [ ] Implementing *PSR* classes
+* [ ] Implementing **PSR** classes
   
 ### Notes
 * It's only for experiments and not intended for production use.

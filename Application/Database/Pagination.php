@@ -14,10 +14,12 @@ class Pagination
      * @var string $sql Query string
      */
     protected $sql;
+    
     /**
      * @var int $page Current page number
      */
     protected $page;
+
     /**
      * @var int $limit Item count per page
      */

@@ -53,4 +53,29 @@ class CustomerService
             $stmt->fetch(PDO::FETCH_ASSOC), new Customer()
         );
     }
+
+    public function save(Customer $customer)
+    {
+
+    }
+
+    public function insert(Customer $customer)
+    {
+
+    }
+
+    public function update(Customer $customer)
+    {
+
+    }
+
+    public function flush()
+    {
+
+    }
+
+    public function remove(Customer $customer)
+    {
+        
+    }
 }

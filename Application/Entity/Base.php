@@ -34,9 +34,9 @@ abstract class Base
     /**
      * Set entity id
      * 
-     * @param int $id Entity id
+     * @param int|null $id Entity id
      */
-    public function setId(int $id): void
+    public function setId(?int $id): void
     {
         $this->id = (int) $id;
     }

@@ -7,7 +7,7 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * [x] Database connection
 * [x] Query builder
 * [x] Pagination
-* [ ] ORM (Object relationship mapper)
+* [x] ORM (Object relationship mapper)
 * [ ] HTML component generator
 * [ ] Middleware
 * [ ] Authentication

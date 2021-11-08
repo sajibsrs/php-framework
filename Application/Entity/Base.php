@@ -3,7 +3,7 @@
 namespace Application\Entity;
 
 /**
- * Extend this class when creating new entity.
+ * Entity classes should extends this class for base funcionalities and configurations.
  */
 abstract class Base
 {
@@ -42,7 +42,7 @@ abstract class Base
     }
 
     /**
-     * Converts array into entity
+     * Converts array into entity. Better known as hydration.
      * 
      * @param array $data Data array
      * @param \Application\Entity\Base $instance Entity instance
@@ -64,7 +64,7 @@ abstract class Base
     }
 
     /**
-     * Converts entity to array
+     * Converts entity to associative array
      * 
      * @return array Converted array of entity
      */

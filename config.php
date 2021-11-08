@@ -1,9 +1,14 @@
 <?php
 
+/**
+ * Database configuration
+ * 
+ * @var array $dbconfig
+ */
 $dbconfig = [
-    'driver'    => 'pgsql',
+    'driver'    => 'mysql',
     'host'      => 'localhost',
-    'user'      => 'postgres',
-    'password'  => 'password',
-    'dbname'    => 'laravel_postgres_redis_user_data'
+    'user'      => 'root',
+    'password'  => '8080k',
+    'dbname'    => 'php_framework'
 ];

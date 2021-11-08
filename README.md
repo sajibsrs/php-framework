@@ -11,6 +11,8 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * [ ] HTML component generator
 * [ ] Middleware
 * [ ] Authentication
+* [ ] Routing
+* [ ] Caching
 * [ ] REST API
 * [ ] Security
 * [ ] Implementing **PSR** classes

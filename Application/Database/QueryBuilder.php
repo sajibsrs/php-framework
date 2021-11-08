@@ -33,6 +33,9 @@ class QueryBuilder
 
     /**
      * Query builder WHERE clause
+     * 
+     * @param string|null $condition
+     * @return \Application\Database\QueryBuilder
      */
     public static function where(string $condition = null): QueryBuilder
     {
@@ -42,6 +45,11 @@ class QueryBuilder
 
     /**
      * Query builder LIKE operator
+     * 
+     * @param string $column Column name
+     * @param string $pattern Match pattern
+     * @return \Application\Database\QueryBuilder
+     * @see https://dev.mysql.com/doc/refman/8.0/en/pattern-matching.html
      */
     public static function like(string $column, string $pattern): QueryBuilder
     {
@@ -51,6 +59,9 @@ class QueryBuilder
 
     /**
      * Query builder AND operator
+     * 
+     * @param string|null $condition
+     * @return \Application\Database\QueryBuilder
      */
     public static function and(string $condition = null): QueryBuilder
     {
@@ -60,6 +71,9 @@ class QueryBuilder
 
     /**
      * Query builder OR operator
+     * 
+     * @param string|null $condition
+     * @return \Application\Database\QueryBuilder
      */
     public static function or(string $condition = null): QueryBuilder
     {
@@ -69,6 +83,9 @@ class QueryBuilder
 
     /**
      * Query builder IN operator
+     * 
+     * @param array $values
+     * @return \Application\Database\QueryBuilder
      */
     public static function in(array $values): QueryBuilder
     {
@@ -78,6 +95,9 @@ class QueryBuilder
 
     /**
      * Query builder NOT operator
+     * 
+     * @param string $condition
+     * @return \Application\Database\QueryBuilder
      */
     public static function not(string $condition = ''): QueryBuilder
     {
@@ -87,6 +107,9 @@ class QueryBuilder
 
     /**
      * Query builder LIMIT clause
+     * 
+     * @param int $limit
+     * @return \Application\Database\QueryBuilder
      */
     public static function limit(int $limit): QueryBuilder
     {
@@ -96,6 +119,9 @@ class QueryBuilder
 
     /**
      * Query builder OFFSET clause
+     * 
+     * @param int $offset
+     * @return \Application\Database\QueryBuilder
      */
     public static function offset(int $offset): QueryBuilder
     {
@@ -104,9 +130,11 @@ class QueryBuilder
     }
 
     /**
-     * Get the query built by the Query builder
+     * Get the query, built by the query builder
+     * 
+     * @return string Query
      */
-    public static function getSql(): string
+    public static function getQuery(): string
     {
         self::$sql = self::$prefix . implode(' ', self::$where) . ' ' . implode(' ', self::$control);
         self::$sql = trim(preg_replace('/  /', ' ', self::$sql));

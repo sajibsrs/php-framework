@@ -36,4 +36,21 @@ class CustomerService
             $stmt->fetch(PDO::FETCH_ASSOC), new Customer()
         );
     }
+
+    /**
+     * Finds customer by email and returs customer object
+     * 
+     * @param string $email Customer email address
+     * @return \Application\Entity\Customer|false Customer object or false on failure
+     */
+    public function findByEmail(string $email): Customer
+    {
+        $stmt = $this->connection->pdo->prepare(
+            QueryBuilder::select(Customer::TABLE)->where('email = :email')::getQuery()
+        );
+        $stmt->execute(['email' => $email]);
+        return Customer::arrayToEntity(
+            $stmt->fetch(PDO::FETCH_ASSOC), new Customer()
+        );
+    }
 }

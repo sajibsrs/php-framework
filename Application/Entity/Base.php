@@ -54,7 +54,10 @@ abstract class Base
             
             foreach ($instance->mapping as $dbColumn => $propertyName) {
                 $method = 'set' . ucfirst($propertyName);
-                $instance->$method($data[$dbColumn]);
+
+                if (isset($data[$dbColumn])) {
+                    $instance->$method($data[$dbColumn]);
+                }
             }
             
             return $instance;

@@ -24,14 +24,13 @@ class CustomerService
      * Finds customer by id and returns customer object
      * 
      * @param int $id Customer id
-     * @return \Application\Entity\Customer|false Customer object
+     * @return \Application\Entity\Customer|false Customer object or false on failure
      */
     public function findById(int $id): Customer
     {
-        $stmt = $this
-            ->connection
-            ->pdo
-            ->prepare(QueryBuilder::select('customers')->where('id = :id')::getQuery());
+        $stmt = $this->connection->pdo->prepare(
+                QueryBuilder::select(Customer::TABLE)->where('id = :id')::getQuery()
+            );
         $stmt->execute(['id' => (int) $id]);
         return Customer::arrayToEntity(
             $stmt->fetch(PDO::FETCH_ASSOC), new Customer()

@@ -17,7 +17,7 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 
 ### Improvements
 * [ ] Fixes and improvements
-* [ ] Architectural redesign
+* [ ] Restructuring
 * [ ] Testing
   
 ### Notes

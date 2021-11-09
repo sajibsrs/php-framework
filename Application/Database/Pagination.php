@@ -11,17 +11,23 @@ class Pagination
     public const OFFSET_DEFAULT = 0;
 
     /**
-     * @var string $sql Query string
+     * Query string
+     * 
+     * @var string $sql
      */
     protected $sql;
     
     /**
-     * @var int $page Current page number
+     * Current page number
+     * 
+     * @var int $page
      */
     protected $page;
 
     /**
-     * @var int $limit Item count per page
+     * Item count per page
+     * 
+     * @var int $limit
      */
     protected $limit;
 
@@ -47,7 +53,15 @@ class Pagination
         $this->sql = preg_replace('/LIMIT \d+.*OFFSET \d+/Ui', 'LIMIT ' . $limit . ' OFFSET ' .  $offset, $sql);
     }
 
-    public function paginate(Connection $con, $mode, $params = [])
+    /**
+     * Creates pagination array.
+     * 
+     * @param \Application\Database\Connection $con Database connection
+     * @param int $mode PDO fetch mode
+     * @param array $params Parameters for binding to query string (Optional)
+     * @return array|bool Returns array of items or false on failure
+     */
+    public function paginate(Connection $con, int $mode, $params = [])
     {
         try {
             $stmt = $con->pdo->prepare($this->sql);

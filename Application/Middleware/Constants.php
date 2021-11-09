@@ -34,8 +34,9 @@ class Constants
     const MODE_READ     = 'r';
     const MODE_WRITE    = 'w';
 
-    const ERROR_BAD = 'ERROR: ';
-    const ERROR_UNKNOWN = 'ERROR: Unknown';
+    const ERROR_BAD         = 'ERROR: Bad ';
+    const ERROR_INVALID_URI = 'ERROR: Invalid URI';
+    const ERROR_UNKNOWN     = 'ERROR: Unknown';
 
     const STATUS_CODES = [
         200 => 'OK',

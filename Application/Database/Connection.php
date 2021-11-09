@@ -10,6 +10,11 @@ class Connection
 {
     const ERROR_CONFIG = 'ERROR: Database configuration error';
 
+    /**
+     * PDO object
+     * 
+     * @var \PDO
+     */
     public $pdo;
 
     public function __construct(array $config)

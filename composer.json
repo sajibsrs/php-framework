@@ -1,0 +1,18 @@
+{
+    "name": "sajib/php-framework",
+    "description": "An experimental php framework written from scratch.",
+    "version": "0.0.1",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Application\\": "Application/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sajidur Rahman",
+            "email": "sajibsrs@gmail.com"
+        }
+    ],
+    "require": {}
+}

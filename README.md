@@ -18,7 +18,7 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * [ ] Implementing **PSR** classes
 
 ### Improvements
-* [x] Integrate composer (for dependency management & auto-loading)
+* [x] Integrate composer ( For dependency management and auto-loading )
 * [ ] Fixes and improvements
 * [ ] Restructuring
 * [ ] Testing

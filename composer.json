@@ -14,5 +14,7 @@
             "email": "sajibsrs@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "psr/http-message": "^1.0"
+    }
 }

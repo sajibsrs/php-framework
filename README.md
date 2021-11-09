@@ -1,5 +1,5 @@
 # PHP custom framework experiment
-This project is all about experimenting with features PHP/Modern PHP has to offer. Implementing programming best practices and patterns, and creating a custom *PHP framework* from scratch.
+This project is all about experimenting with features PHP/Modern PHP has to offer. Creating a custom **PHP framework** from scratch by implementing programming best practices and architectures.
 
 ### Index and progress
 * [x] Creating configurations

@@ -34,9 +34,14 @@ class Constants
     const MODE_READ     = 'r';
     const MODE_WRITE    = 'w';
 
-    const ERROR_BAD         = 'ERROR: Bad ';
-    const ERROR_INVALID_URI = 'ERROR: Invalid URI';
-    const ERROR_UNKNOWN     = 'ERROR: Unknown';
+    const ERROR_BAD                 = 'ERROR: Bad ';
+    const ERROR_INVALID_URI         = 'ERROR: Invalid URI';
+    const ERROR_UNKNOWN             = 'ERROR: Unknown';
+    const ERROR_FILE_MOVE           = 'ERROR: File move error';
+    const ERROR_FILE_ALREADY_MOVED  = 'ERROR: File already moved';
+    const ERROR_NO_DIR              = 'ERROR: No such directory';
+    const ERROR_NOT_FILE            = 'ERROR: No such file';
+    const ERROR_FILE_NOT_FOUND      = 'ERROR: File not found';
 
     const STATUS_CODES = [
         200 => 'OK',

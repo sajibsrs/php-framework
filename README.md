@@ -1,7 +1,7 @@
 # PHP custom framework experiment
 This project is all about experimenting with features PHP/Modern PHP has to offer. Creating a custom **PHP framework** from scratch by implementing programming best practices and architectures.
 
-### Index and progress
+### Index and Progress
 * [x] Creating configurations
 * [x] Creating PHP autoloader
 * [x] Database connection
@@ -15,13 +15,20 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 * [ ] Caching
 * [ ] REST API
 * [ ] Security
-* [ ] Implementing **PSR** classes
+
+### PSR Implementation
+* [x] PSR-4: Autoloader (With composer)
+* [ ] PSR-7: HTTP message interfaces
+
+### Testing
+* [x] Manual testing
+* [ ] Unit testing
+* [ ] Automated testing
 
 ### Improvements
-* [x] Integrate composer ( For dependency management and auto-loading )
+* [x] Integrate composer ( Dependency management and auto-loading )
 * [ ] Fixes and improvements
 * [ ] Restructuring
-* [ ] Testing
   
 ### Notes
 * It's only for experiments and not intended for production use.

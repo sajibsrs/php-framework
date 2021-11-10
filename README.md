@@ -32,4 +32,4 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
   
 ### Notes
 * It's only for experiments and not intended for production use.
-* Licensed under [MIT]([hlinkttps://](https://github.com/sajibsrs/php-framework/blob/master/LICENSE))
+* Licensed under [MIT](https://github.com/sajibsrs/php-framework/blob/master/LICENSE)

@@ -18,7 +18,7 @@ This project is all about experimenting with features PHP/Modern PHP has to offe
 
 ### PSR Implementation
 * [x] PSR-4: Autoloader (With composer)
-* [ ] PSR-7: HTTP message interfaces
+* [x] PSR-7: HTTP message interfaces
 
 ### Testing
 * [x] Manual testing

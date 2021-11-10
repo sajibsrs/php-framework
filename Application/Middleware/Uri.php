@@ -15,9 +15,7 @@ class Uri implements UriInterface
         $this->uriParts = parse_url($uri);
 
         if (! $this->uriParts) {
-            throw new InvalidArgumentException(
-                Constants::ERROR_INVALID_URI
-            );
+            throw new InvalidArgumentException(Constants::ERROR_INVALID_URI);
         }
 
         $this->uri = $uri;
@@ -142,9 +140,7 @@ class Uri implements UriInterface
             if (isset(Constants::STANDARD_PORTS[strtolower($scheme)])) {
                 $this->uriParts['scheme'] = $scheme;
             } else {
-                throw new InvalidArgumentException(
-                    Constants::ERROR_BAD . __METHOD__
-                );
+                throw new InvalidArgumentException(Constants::ERROR_BAD . __METHOD__);
             }
         }
 

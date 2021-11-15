@@ -42,6 +42,7 @@ class Constants
     const ERROR_NO_DIR              = 'ERROR: No such directory';
     const ERROR_NOT_FILE            = 'ERROR: No such file';
     const ERROR_FILE_NOT_FOUND      = 'ERROR: File not found';
+    const ERROR_BODY_UNREADABLE     = 'ERROR: Body unreadable';
 
     const STATUS_CODES = [
         200 => 'OK',

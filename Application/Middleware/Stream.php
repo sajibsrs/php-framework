@@ -15,7 +15,7 @@ class Stream implements StreamInterface
 
     public function __construct($input, $mode = Constants::MODE_READ)
     {
-        $this->stram = fopen($input, $mode);
+        $this->stream = fopen($input, $mode);
         $this->metadata = stream_get_meta_data($this->stream);
         $this->info = new SplFileInfo($input);
     }
@@ -107,7 +107,7 @@ class Stream implements StreamInterface
 
     public function isWritable()
     {
-        return $this->stream->isWritable();
+        return $this->info->isWritable();
     }
 
     public function isReadable()

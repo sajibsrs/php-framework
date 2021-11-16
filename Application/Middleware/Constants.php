@@ -13,7 +13,8 @@ class Constants
     const METHOD_PUT    = 'put';
     const METHOD_DELETE = 'delete';
 
-    const HTTP_METHODS  = ['get', 'put', 'post', 'delete'];
+    const HTTP_METHODS      = ['get', 'put', 'post', 'delete'];
+    const ERROR_HTTP_METHOD = 'ERROR: HTTP method';
 
     const STANDARD_PORTS = [
         'ftp'   => 21,
